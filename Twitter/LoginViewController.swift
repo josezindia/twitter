@@ -9,10 +9,13 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    @IBOutlet weak var onLoginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //onLoginButton.layer.cornerRadius = 18
+        onLoginButton.layer.cornerRadius = onLoginButton.bounds.size.height/2
+        
+     
         // Do any additional setup after loading the view.
     }
     
@@ -25,7 +28,6 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func onLoginButton(_ sender: Any) {
-       
         let myUrl = "https://api.twitter.com/oauth/request_token"
         
         TwitterAPICaller.client?.login(url: myUrl, success: {

@@ -16,17 +16,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHT-Jn-zTK">
-                                <rect key="frame" x="94.5" y="307.5" width="186" height="52"/>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XHT-Jn-zTK">
+                                <rect key="frame" x="90" y="307.5" width="195" height="52"/>
                                 <color key="backgroundColor" red="0.14599391070000001" green="0.60464920239999997" blue="0.96130555870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="186" id="Byr-bC-Y7F"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="52" id="0Br-0D-S1u"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="195" id="5eA-6O-toS"/>
                                     <constraint firstAttribute="height" constant="52" id="RY5-n9-c3d"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="67" id="Z7i-Ra-JNb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
-                                <state key="normal" title="Login">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <state key="normal" title="Login"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="18"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onLoginButton:" destination="M0X-f0-FX6" eventType="touchUpInside" id="uiV-HP-Ekf"/>
                                 </connections>
@@ -36,23 +41,26 @@
                         <constraints>
                             <constraint firstItem="XHT-Jn-zTK" firstAttribute="centerX" secondItem="hbJ-o0-jXj" secondAttribute="centerX" id="GfV-mY-1I1"/>
                             <constraint firstItem="XHT-Jn-zTK" firstAttribute="centerY" secondItem="hbJ-o0-jXj" secondAttribute="centerY" id="h3L-7S-gHh"/>
+                            <constraint firstItem="XHT-Jn-zTK" firstAttribute="centerX" secondItem="hbJ-o0-jXj" secondAttribute="centerX" id="mVb-cl-YJZ"/>
+                            <constraint firstItem="XHT-Jn-zTK" firstAttribute="centerY" secondItem="hbJ-o0-jXj" secondAttribute="centerY" id="qQB-fD-aWa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hcQ-qw-mqh"/>
                     </view>
                     <connections>
+                        <outlet property="onLoginButton" destination="XHT-Jn-zTK" id="hBv-V3-HHE"/>
                         <segue destination="Tc9-nG-76O" kind="presentation" identifier="loginToHome" id="Bnc-Oj-ofm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="paF-uM-pZr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-183" y="-9"/>
+            <point key="canvasLocation" x="-183.19999999999999" y="-9.4452773613193415"/>
         </scene>
         <!--Home-->
         <scene sceneID="d3S-kn-c1l">
             <objects>
                 <tableViewController id="q9U-H7-KHD" customClass="HomeTableViewController" customModule="Twitter" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="NSh-Jf-Cvh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -123,9 +131,9 @@
         <!--Navigation Controller-->
         <scene sceneID="zFh-GB-dl9">
             <objects>
-                <navigationController id="Tc9-nG-76O" sceneMemberID="viewController">
+                <navigationController modalPresentationStyle="fullScreen" id="Tc9-nG-76O" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BRV-o2-Rr4">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.14599391070000001" green="0.60464920239999997" blue="0.96130555870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <textAttributes key="titleTextAttributes">
